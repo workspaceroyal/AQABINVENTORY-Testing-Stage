@@ -9,12 +9,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Customer Invoice</h4>
+                                    <h4 class="mb-sm-0">ক্রেতার ইনভয়েস</h4>
 
                                     <div class="page-title-right">
                                         <ol class="m-0 breadcrumb">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                                            <li class="breadcrumb-item active">Customer Invoice</li>
+                                            <li class="breadcrumb-item active">ক্রেতার ইনভয়েস</li>
                                         </ol>
                                     </div>
 
@@ -35,16 +35,16 @@
         <div class="col-12">
             <div>
                 <div class="p-2">
-     <h3 class="font-size-16"><strong>Customer Invoice ( Invoice No: #{{ $payment['invoice']['invoice_no'] }} ) </strong></h3>
+     <h3 class="font-size-16"><strong>ক্রেতার ইনভয়েস ( Invoice No: #{{ $payment['invoice']['invoice_no'] }} ) </strong></h3>
                 </div>
                 <div class="">
 <div class="table-responsive">
     <table class="table">
         <thead>
         <tr>
-            <td><strong>Customer Name </strong></td>
-            <td class="text-center"><strong>Customer Mobile</strong></td>
-            <td class="text-center"><strong>Address</strong>
+            <td><strong>নাম </strong></td>
+            <td class="text-center"><strong>মোবাইল</strong></td>
+            <td class="text-center"><strong>ঠিকানা</strong>
             </td>
 
 
@@ -92,16 +92,16 @@
         <thead>
         <tr>
             <td><strong>Sl </strong></td>
-            <td class="text-center"><strong>Category</strong></td>
-            <td class="text-center"><strong>Product Name</strong>
+            <td class="text-center"><strong>ক্যাটাগরি</strong></td>
+            <td class="text-center"><strong>পণ্য</strong>
             </td>
-            <td class="text-center"><strong>Current Stock</strong>
+            <td class="text-center"><strong>বর্তমান স্টক</strong>
             </td>
-            <td class="text-center"><strong>Quantity</strong>
+            <td class="text-center"><strong>পরিমাণ</strong>
             </td>
-            <td class="text-center"><strong>Unit Price </strong>
+            <td class="text-center"><strong>প্রতি এককের মূল্য</strong>
             </td>
-            <td class="text-center"><strong>Total Price</strong>
+            <td class="text-center"><strong>মোট মূল্য</strong>
             </td>
 
         </tr>
@@ -146,7 +146,7 @@ $invoice_details = App\Models\InvoiceDetail::where('invoice_id',$payment->invoic
                    <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="text-center no-line">
-                    <strong>Discount Amount</strong></td>
+                    <strong>হ্রাসকৃত মুল্য</strong></td>
                 <td class="no-line text-end"> ৳ {{ $payment->discount_amount }}</td>
             </tr>
              <tr>
@@ -156,7 +156,7 @@ $invoice_details = App\Models\InvoiceDetail::where('invoice_id',$payment->invoic
                    <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="text-center no-line">
-                    <strong>Paid Amount</strong></td>
+                    <strong>পরিশোধিত মুল্য</strong></td>
                 <td class="no-line text-end">৳ {{ $payment->paid_amount }}</td>
             </tr>
 
@@ -167,7 +167,7 @@ $invoice_details = App\Models\InvoiceDetail::where('invoice_id',$payment->invoic
                    <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="text-center no-line">
-                    <strong>Due Amount</strong></td>
+                    <strong>বাকি মুল্য</strong></td>
                     <input type="hidden" name="new_paid_amount" value="{{$payment->due_amount}}">
                 <td class="no-line text-end"> ৳ {{ $payment->due_amount }}</td>
             </tr>
@@ -178,7 +178,7 @@ $invoice_details = App\Models\InvoiceDetail::where('invoice_id',$payment->invoic
                    <td class="no-line"></td>
                 <td class="no-line"></td>
                 <td class="text-center no-line">
-                    <strong>Grand Amount</strong></td>
+                    <strong>সর্বমট মুল্য</strong></td>
                 <td class="no-line text-end"><h4 class="m-0">৳ {{ $payment->total_amount }}</h4></td>
             </tr>
                             </tbody>
@@ -191,27 +191,27 @@ $invoice_details = App\Models\InvoiceDetail::where('invoice_id',$payment->invoic
         <div class="row">
 
             <div class="form-group col-md-3">
-                  <label> Paid Status </label>
+                  <label> পরিশোধের অবস্থা </label>
                     <select name="paid_status" id="paid_status" class="form-select">
-                        <option value="">Select Status </option>
-                        <option value="full_paid">Full Paid </option>
-                        <option value="partial_paid">Partial Paid </option>
+                        <option value="">সিলেক্ট করুন</option>
+                        <option value="full_paid">সম্পুর্ণ নগদ </option>
+                        <option value="partial_paid">আংশিক নগদ </option>
 
                     </select>
-        <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="Enter Paid Amount" style="display:none;">
+        <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="এডিট করুন" style="display:none;">
             </div>
 
 
             <div class="form-group col-md-3">
                 <div class="md-3">
-                <label for="example-text-input" class="form-label">Date</label>
-                 <input class="form-control example-date-input" placeholder="YYYY-MM-DD"  name="date" type="date"  id="date">
+                <label for="example-text-input" class="form-label">তারিখ</label>
+                 <input class="form-control example-date-input" placeholder="বছর-মাস-দিন"  name="date" type="date"  id="date">
             </div>
             </div>
 
             <div class="form-group col-md-3">
                  <div class="md-3" style="padding-top: 30px;">
-                <button type="submit" class="btn btn-info">Invoice Update</button>
+                <button type="submit" class="btn btn-info">ইনভয়েস আপডেট করুন</button>
             </div>
 
             </div>

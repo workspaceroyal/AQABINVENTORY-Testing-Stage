@@ -8,12 +8,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Supplier Wise Stock Report</h4>
+                                    <h4 class="mb-sm-0">সরবরাহকারী ভিত্তিক স্টক রিপোর্ট</h4>
 
                                     <div class="page-title-right">
                                         <ol class="m-0 breadcrumb">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);"> </a></li>
-                                            <li class="breadcrumb-item active">Supplier Wise Stock Report</li>
+                                            <li class="breadcrumb-item active">সরবরাহকারী ভিত্তিক স্টক রিপোর্ট</li>
                                         </ol>
                                     </div>
 
@@ -32,7 +32,7 @@
             <div class="invoice-title">
 
                 <h3>
-                    <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> Al-Quran Academy Bangladesh
+                    <img src="{{ asset('backend/assets/images/logo-sm.png') }}" alt="logo" height="24"/> আল-কুরআন একাডেমি বাংলাদেশ
                 </h3>
             </div>
             <hr>
@@ -40,9 +40,9 @@
             <div class="row">
                 <div class="mt-4 col-6">
                     <address>
-                        <strong>Al-Quran Academy Bangladesh:</strong><br>
-                        Purana Palton Dhaka<br>
-                        aqab@gmail.com.com
+                        <strong>আল-কুরআন একাডেমি বাংলাদেশ:</strong><br>
+                        ৩২ পুরানা পল্টন, ঢাকা ১০০০, বাংলাদেশ<br>
+                        alquranacademybangladesh@gmail.com
                     </address>
                 </div>
                 <div class="mt-4 col-6 text-end">
@@ -81,21 +81,21 @@
                 <div class="">
 <div class="table-responsive">
 
-    <h3 class="text-center"><strong>Supplier Name : </strong> {{ $allData['0']['supplier']['name'] }} </h3>
+    <h3 class="text-center"><strong>সরবরাহকারী: </strong> {{ $allData['0']['supplier']['name'] }} </h3>
 
 
     <table class="table">
         <thead>
         <tr>
-            <td><strong>Sl </strong></td>
-            <td class="text-center"><strong>Supplier Name </strong></td>
-            <td class="text-center"><strong>Unit  </strong>
+            <td><strong>নং</strong></td>
+            <td class="text-center"><strong>সরবরাহকারী </strong></td>
+            <td class="text-center"><strong>একক</strong>
             </td>
-            <td class="text-center"><strong>Category</strong>
+            <td class="text-center"><strong>ক্যাটাগরি</strong>
             </td>
-            <td class="text-center"><strong>Product Name</strong>
+            <td class="text-center"><strong>পণ্য</strong>
             </td>
-            <td class="text-center"><strong>Stock  </strong>
+            <td class="text-center"><strong>স্টক</strong>
             </td>
 
 
@@ -132,7 +132,7 @@
 
                     <div class="d-print-none">
                         <div class="float-end">
-                            <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light"><i class="fa fa-print"> Print / Download</i></a>
+                            <a href="javascript:window.print()" class="btn btn-success waves-effect waves-light"><i class="fa fa-print"> প্রিন্ট/ডাউনলোড</i></a>
                             {{-- <a href="#" class="btn btn-primary waves-effect waves-light ms-2">Download</a> --}}
                         </div>
                     </div>

@@ -9,59 +9,59 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0"> Customer Wise Report </h4>
+                                    <h4 class="mb-sm-0"> ক্রেতা ভিত্তিক রিপোর্ট </h4>
 
-                                     
+
 
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
-                        
+
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
 
- 
+
     <div class="row">
-        <div class="col-md-12 text-center">
-            <strong> Customer Wise Credit Report </strong>
+        <div class="text-center col-md-12">
+            <strong> ক্রেতা ভিত্তিক বাকি রিপোর্ট </strong>
             <input type="radio" name="customer_wise_report" value="customer_wise_credit" class="search_value"> &nbsp;&nbsp;
 
 
-            <strong> Customer Wise Paid Report </strong>
+            <strong> ক্রেতা ভিত্তিক নগদ রিপোর্ট </strong>
             <input type="radio" name="customer_wise_report" value="customer_wise_paid" class="search_value">
 
 
-        </div>        
+        </div>
     </div> <!-- // end row  -->
 
-<!--  /// Customer Credit Wise  -->
+<!--  /// ক্রেতা বাকি ভিত্তিক  -->
     <div class="show_credit" style="display:none">
         <form method="GET" action="{{ route('customer.wise.credit.report') }}" id="myForm" target="_blank" >
 
             <div class="row">
                 <div class="col-sm-8 form-group">
-                    <label>Customer Name </label>
+                    <label>ক্রেতার নাম </label>
               <select name="customer_id" class="form-select select2"  >
-                <option value="">Select Customer</option>
+                <option value="">সিলেক্ট করুন</option>
                 @foreach($customers as $cus)
                 <option value="{{ $cus->id }}">{{ $cus->name }}</option>
                @endforeach
-                </select>                    
+                </select>
                 </div>
 
                 <div class="col-sm-4" style="padding-top: 28px;">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">সার্চ</button>
                 </div>
-                
+
             </div>
-            
+
         </form>
-        
+
     </div>
-<!--  /// End Customer Credit Wise  -->
+<!--  /// End ক্রেতা বাকি ভিত্তিক  -->
 
 <!--  /// show_paid  -->
 <div class="show_paid" style="display:none">
@@ -69,42 +69,42 @@
 
             <div class="row">
                 <div class="col-sm-8 form-group">
-                    <label>Customer Name </label>
+                    <label>ক্রেতার নাম </label>
               <select name="customer_id" class="form-select select2"  >
-                <option value="">Select Customer</option>
+                <option value="">সিলেক্ট করুন</option>
                 @foreach($customers as $cus)
                 <option value="{{ $cus->id }}">{{ $cus->name }}</option>
                @endforeach
-                </select>                    
+                </select>
                 </div>
 
                 <div class="col-sm-4" style="padding-top: 28px;">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">সার্চ</button>
                 </div>
-                
+
             </div>
-            
+
         </form>
-        
+
     </div>
 <!--  /// End show_paid  -->
 
 
 
 
-                    
-        
+
+
                                     </div>
                                 </div>
                             </div> <!-- end col -->
                         </div> <!-- end row -->
-        
-                     
-                        
+
+
+
                     </div> <!-- container-fluid -->
                 </div>
 
- 
+
 
 
 <script type="text/javascript">
@@ -115,7 +115,7 @@
         }else{
             $('.show_credit').hide();
         }
-    }); 
+    });
 
 </script>
 
@@ -128,11 +128,11 @@
         }else{
             $('.show_paid').hide();
         }
-    }); 
+    });
 
 </script>
 
- 
- 
+
+
 
 @endsection

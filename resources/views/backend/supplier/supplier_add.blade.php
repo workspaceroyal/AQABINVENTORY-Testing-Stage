@@ -10,15 +10,15 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add Supplier Page </h4><br><br>
-            
-  
+            <h4 class="card-title">সরবরাহকারী যুক্ত করার পৃষ্ঠা </h4><br><br>
+
+
 
             <form method="post" action="{{ route('supplier.store') }}" id="myForm" >
                 @csrf
 
-            <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Name </label>
+            <div class="mb-3 row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">নাম</label>
                 <div class="form-group col-sm-10">
                     <input name="name" class="form-control" type="text"    >
                 </div>
@@ -26,8 +26,8 @@
             <!-- end row -->
 
 
-              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Mobile </label>
+              <div class="mb-3 row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">মোবাইল</label>
                 <div class="form-group col-sm-10">
                     <input name="mobile_no" class="form-control" type="text"    >
                 </div>
@@ -35,8 +35,8 @@
             <!-- end row -->
 
 
-  <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Email </label>
+  <div class="mb-3 row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">ইমেইল</label>
                 <div class="form-group col-sm-10">
                     <input name="email" class="form-control" type="email"  >
                 </div>
@@ -44,28 +44,28 @@
             <!-- end row -->
 
 
-  <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Supplier Address </label>
+  <div class="mb-3 row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">ঠিকানা</label>
                 <div class="form-group col-sm-10">
                     <input name="address" class="form-control" type="text"  >
                 </div>
             </div>
             <!-- end row -->
- 
- 
 
 
-        
-<input type="submit" class="btn btn-info waves-effect waves-light" value="Add Supplier">
+
+
+
+<input type="submit" class="btn btn-info waves-effect waves-light" value=" যুক্ত করুন ">
             </form>
-             
-           
-           
+
+
+
         </div>
     </div>
 </div> <!-- end col -->
 </div>
- 
+
 
 
 </div>
@@ -77,7 +77,7 @@
             rules: {
                 name: {
                     required : true,
-                }, 
+                },
                  mobile_no: {
                     required : true,
                 },
@@ -102,7 +102,7 @@
                     required : 'Please Enter Your Address',
                 },
             },
-            errorElement : 'span', 
+            errorElement : 'span',
             errorPlacement: function (error,element) {
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);
@@ -115,9 +115,9 @@
             },
         });
     });
-    
+
 </script>
 
 
- 
-@endsection 
+
+@endsection

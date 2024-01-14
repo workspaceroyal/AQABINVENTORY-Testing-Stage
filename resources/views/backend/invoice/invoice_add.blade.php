@@ -10,14 +10,14 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add Invoice  </h4><br><br>
+            <h4 class="card-title"> ইনভয়েস যুক্ত করুন</h4><br><br>
 
 
     <div class="row">
 
          <div class="col-md-1">
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Inv No</label>
+                <label for="example-text-input" class="form-label">নং</label>
                  <input class="form-control example-date-input" name="invoice_no" type="text" value="{{ $invoice_no }}"  id="invoice_no" readonly style="background-color:#ddd" >
             </div>
         </div>
@@ -25,7 +25,7 @@
 
         <div class="col-md-2">
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Date</label>
+                <label for="example-text-input" class="form-label">তারিখ</label>
                  <input class="form-control example-date-input" value="{{ $date }}" name="date" type="date"  id="date">
             </div>
         </div>
@@ -33,9 +33,9 @@
 
        <div class="col-md-3">
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Category Name </label>
+                <label for="example-text-input" class="form-label">ক্যাটাগরি</label>
                 <select name="category_id" id="category_id" class="form-select select2" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
+                <option selected="">একটি সিলেক্ট করুন</option>
                   @foreach($category as $cat)
                 <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                @endforeach
@@ -46,9 +46,9 @@
 
          <div class="col-md-3">
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Product Name </label>
+                <label for="example-text-input" class="form-label">পণ্যের নাম</label>
                 <select name="product_id" id="product_id" class="form-select select2" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
+                <option selected="">একটি সিলেক্ট করুন</option>
 
                 </select>
             </div>
@@ -57,7 +57,7 @@
 
            <div class="col-md-1">
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Stock(Pic/Kg)</label>
+                <label for="example-text-input" class="form-label">স্টক</label>
                  <input class="form-control example-date-input" name="current_stock_qty" type="text"  id="current_stock_qty" readonly style="background-color:#ddd" >
             </div>
         </div>
@@ -68,7 +68,7 @@
         <label for="example-text-input" class="form-label" style="margin-top:43px;">  </label>
 
 
-        <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> Add More</i>
+        <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> যুক্ত করুন</i>
     </div>
 </div>
 
@@ -87,12 +87,12 @@
             <table class="table-sm table-bordered" width="100%" style="border-color: #ddd;">
                 <thead>
                     <tr>
-                        <th>Category</th>
-                        <th>Product Name </th>
-                        <th width="7%">PSC/KG</th>
-                        <th width="10%">Unit Price </th>
-                        <th width="15%">Total Price</th>
-                        <th width="7%">Action</th>
+                        <th>ক্যাটাগরি</th>
+                        <th>পণ্যের নাম</th>
+                        <th width="7%">পরিমাণ</th>
+                        <th width="10%">প্রতিটির মূল্য</th>
+                        <th width="15%">মোট মূল্য</th>
+                        <th width="7%">একশন</th>
 
                     </tr>
                 </thead>
@@ -103,15 +103,15 @@
 
                 <tbody>
         <tr>
-            <td colspan="4"> Discount</td>
+            <td colspan="4">মূল্য ছাড়</td>
             <td>
-            <input type="text" name="discount_amount" id="discount_amount" class="form-control estimated_amount" placeholder="Discount Amount"  >
+            <input type="text" name="discount_amount" id="discount_amount" class="form-control estimated_amount" placeholder="ছাড়ের পরিমাণ"  >
             </td>
         </tr>
 
 
                     <tr>
-                        <td colspan="4"> Grand Total</td>
+                        <td colspan="4">সর্বমোট মূল্য</td>
                         <td>
                             <input type="text" name="estimated_amount" value="0" id="estimated_amount" class="form-control estimated_amount" readonly style="background-color: #ddd;" >
                         </td>
@@ -124,18 +124,18 @@
 
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <textarea name="description" class="form-control" id="description" placeholder="Write Description Here"></textarea>
+                    <textarea name="description" class="form-control" id="description" placeholder="এখানে বিবরণ লিখুন"></textarea>
                 </div>
             </div><br>
 
             <div class="row">
                 <div class="form-group col-md-3">
-                    <label> Paid Status </label>
+                    <label> পরিশোধনীয় অবস্থা </label>
                     <select name="paid_status" id="paid_status" class="form-select">
-                        <option value="">Select Status </option>
-                        <option value="full_paid">Full Paid </option>
-                        <option value="full_due">Full Due </option>
-                         <option value="partial_paid">Partial Paid </option>
+                        <option value="">একটি সিলেক্ট করুন </option>
+                        <option value="full_paid">সম্পুর্ণ নগদ </option>
+                        <option value="full_due">সম্পুর্ণ বাকি </option>
+                         <option value="partial_paid">আংশিক নগদ </option>
 
                     </select>
         <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="Enter Paid Amount" style="display:none;">
@@ -143,18 +143,18 @@
 
 
             <div class="form-group col-md-9">
-                <label> Customer Name  </label>
+                <label> ক্রেতা  </label>
                     <select name="customer_id" id="customer_id" class="form-select">
-                        <option value="">Select Customer </option>
+                        <option value="">ক্রেতা সিলেক্ট করুন </option>
                         @foreach($costomer as $cust)
                         <option value="{{ $cust->id }}">{{ $cust->name }} - {{ $cust->mobile_no }}</option>
                         @endforeach
-                         <option value="0">New Customer </option>
+                         <option value="0">নতুন ক্রেতা </option>
                     </select>
             </div>
             </div> <!-- // end row --> <br>
 
-<!-- Hide Add Customer Form -->
+<!-- Hide যুক্ত করুন Customer Form -->
 <div class="row new_customer" style="display:none">
     <div class="form-group col-md-4">
         <input type="text" name="name" id="name" class="form-control" placeholder="Write Customer Name">
@@ -168,11 +168,11 @@
         <input type="email" name="email" id="email" class="form-control" placeholder="Write Customer Email">
     </div>
 </div>
-<!-- End Hide Add Customer Form -->
+<!-- End Hide যুক্ত করুন Customer Form -->
 
  <br>
             <div class="form-group">
-                <button type="submit" class="btn btn-info" id="storeButton"> Invoice Store</button>
+                <button type="submit" class="btn btn-info" id="storeButton">যুক্ত করুন</button>
 
             </div>
 
@@ -221,17 +221,17 @@
     </td>
 
      <td>
-        <input type="number" min="1" class="form-control selling_qty text-right" name="selling_qty[]" value="">
+        <input type="number" min="1" class="text-right form-control selling_qty" name="selling_qty[]" value="">
     </td>
 
     <td>
-        <input type="number" class="form-control unit_price text-right" name="unit_price[]" value="">
+        <input type="number" class="text-right form-control unit_price" name="unit_price[]" value="">
     </td>
 
 
 
      <td>
-        <input type="number" class="form-control selling_price text-right" name="selling_price[]" value="0" readonly>
+        <input type="number" class="text-right form-control selling_price" name="selling_price[]" value="0" readonly>
     </td>
 
      <td>
@@ -335,7 +335,7 @@
                 type: "GET",
                 data:{category_id:category_id},
                 success:function(data){
-                    var html = '<option value="">Select Category</option>';
+                    var html = '<option value="">একটি সিলেক্ট করুন</option>';
                     $.each(data,function(key,v){
                         html += '<option value=" '+v.id+' "> '+v.name+'</option>';
                     });

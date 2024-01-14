@@ -10,29 +10,29 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add Purchase  </h4><br><br>
-            
+            <h4 class="card-title">ক্রয় যুক্ত করার পৃষ্ঠা </h4><br>
+
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4"></br>
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Date</label>
+                <label for="example-text-input" class="form-label">তারিখ</label>
                  <input class="form-control example-date-input" name="date" type="date"  id="date">
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4"></br>
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Purchase No</label>
+                <label for="example-text-input" class="form-label">ক্রয় নং</label>
                  <input class="form-control example-date-input" name="purchase_no" type="text"  id="purchase_no">
             </div>
         </div>
 
 
-        <div class="col-md-4">
+        <div class="col-md-4"></br>
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Supplier Name </label>
+                <label for="example-text-input" class="form-label">সরবরাহকারী</label>
                 <select id="supplier_id" name="supplier_id" class="form-select select2" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
+                <option selected="">একটি সিলেক্ট করুন</option>
                 @foreach($supplier as $supp)
                 <option value="{{ $supp->id }}">{{ $supp->name }}</option>
                @endforeach
@@ -41,34 +41,32 @@
         </div>
 
 
-       <div class="col-md-4">
+       <div class="col-md-4"></br>
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Category Name </label>
+                <label for="example-text-input" class="form-label">ক্যাটাগরি</label>
                 <select name="category_id" id="category_id" class="form-select select2" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
-                
+                <option selected="">একটি সিলেক্ট করুন</option>
+
                 </select>
             </div>
         </div>
 
 
-         <div class="col-md-4">
+         <div class="col-md-4"></br>
             <div class="md-3">
-                <label for="example-text-input" class="form-label">Product Name </label>
+                <label for="example-text-input" class="form-label">পণ্যের নাম </label>
                 <select name="product_id" id="product_id" class="form-select select2" aria-label="Default select example">
-                <option selected="">Open this select menu</option>
-               
+                <option selected="">একটি সিলেক্ট করুন</option>
+
                 </select>
             </div>
         </div>
 
 
-<div class="col-md-4">
+<div class="col-md-4"></br>
     <div class="md-3">
         <label for="example-text-input" class="form-label" style="margin-top:43px;">  </label>
-        
-
-        <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> Add More</i>
+        <i class="btn btn-secondary btn-rounded waves-effect waves-light fas fa-plus-circle addeventmore"> আরো যুক্ত করুন</i>
     </div>
 </div>
 
@@ -76,8 +74,8 @@
 
 
 
-    </div> <!-- // end row  --> 
-           
+    </div> <!-- // end row  -->
+
         </div> <!-- End card-body -->
 <!--  ---------------------------------- -->
 
@@ -87,19 +85,19 @@
             <table class="table-sm table-bordered" width="100%" style="border-color: #ddd;">
                 <thead>
                     <tr>
-                        <th>Category</th>
-                        <th>Product Name </th>
-                        <th>PSC/KG</th>
-                        <th>Unit Price </th>
-                        <th>Description</th>
-                        <th>Total Price</th>
-                        <th>Action</th> 
+                        <th>ক্যাটাগরি</th>
+                        <th>পণ্যের নাম </th>
+                        <th>পরিমাণ</th>
+                        <th>একক প্রিতি মূল্য</th>
+                        <th>বিবরণ</th>
+                        <th>মোট মূল্য</th>
+                        <th>একশন</th>
 
                     </tr>
                 </thead>
 
                 <tbody id="addRow" class="addRow">
-                    
+
                 </tbody>
 
                 <tbody>
@@ -111,13 +109,13 @@
                         <td></td>
                     </tr>
 
-                </tbody>                
+                </tbody>
             </table><br>
             <div class="form-group">
-                <button type="submit" class="btn btn-info" id="storeButton"> Purchase Store</button>
-                
+                <button type="submit" class="btn btn-info" id="storeButton">যুক্ত করুন</button>
+
             </div>
-            
+
         </form>
 
 
@@ -128,7 +126,7 @@
         </div> <!-- End card-body -->
 
 
- 
+
 
 
 
@@ -136,22 +134,22 @@
     </div>
 </div> <!-- end col -->
 </div>
- 
+
 
 
 </div>
 </div>
 
- 
+
 
 
 <script id="document-template" type="text/x-handlebars-template">
-     
+
 <tr class="delete_add_more_item" id="delete_add_more_item">
         <input type="hidden" name="date[]" value="@{{date}}">
         <input type="hidden" name="purchase_no[]" value="@{{purchase_no}}">
         <input type="hidden" name="supplier_id[]" value="@{{supplier_id}}">
-   
+
     <td>
         <input type="hidden" name="category_id[]" value="@{{category_id}}">
         @{{ category_name }}
@@ -163,19 +161,19 @@
     </td>
 
      <td>
-        <input type="number" min="1" class="form-control buying_qty text-right" name="buying_qty[]" value=""> 
+        <input type="number" min="1" class="text-right form-control buying_qty" name="buying_qty[]" value="">
     </td>
 
     <td>
-        <input type="number" class="form-control unit_price text-right" name="unit_price[]" value=""> 
+        <input type="number" class="text-right form-control unit_price" name="unit_price[]" value="">
     </td>
 
  <td>
-        <input type="text" class="form-control" name="description[]"> 
+        <input type="text" class="form-control" name="description[]">
     </td>
 
      <td>
-        <input type="number" class="form-control buying_price text-right" name="buying_price[]" value="0" readonly> 
+        <input type="number" class="text-right form-control buying_price" name="buying_price[]" value="0" readonly>
     </td>
 
      <td>
@@ -235,7 +233,7 @@
 
                  };
                  var html = tamplate(data);
-                 $("#addRow").append(html); 
+                 $("#addRow").append(html);
         });
 
         $(document).on("click",".removeeventmore",function(event){
@@ -251,7 +249,7 @@
             totalAmountPrice();
         });
 
-        // Calculate sum of amout in invoice 
+        // Calculate sum of amout in invoice
 
         function totalAmountPrice(){
             var sum = 0;
@@ -262,7 +260,7 @@
                 }
             });
             $('#estimated_amount').val(sum);
-        }  
+        }
 
     });
 
@@ -281,7 +279,7 @@
                 type: "GET",
                 data:{supplier_id:supplier_id},
                 success:function(data){
-                    var html = '<option value="">Select Category</option>';
+                    var html = '<option value="">একটি সিলেক্ট করুন</option>';
                     $.each(data,function(key,v){
                         html += '<option value=" '+v.category_id+' "> '+v.category.name+'</option>';
                     });
@@ -303,7 +301,7 @@
                 type: "GET",
                 data:{category_id:category_id},
                 success:function(data){
-                    var html = '<option value="">Select Category</option>';
+                    var html = '<option value="">একটি সিলেক্ট করুন</option>';
                     $.each(data,function(key,v){
                         html += '<option value=" '+v.id+' "> '+v.name+'</option>';
                     });
@@ -315,8 +313,8 @@
 
 </script>
 
- 
 
 
- 
-@endsection 
+
+
+@endsection

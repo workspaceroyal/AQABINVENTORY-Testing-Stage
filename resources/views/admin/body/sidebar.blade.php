@@ -20,7 +20,7 @@
 
                 <div class="mt-3">
                     <h4 class="mb-1 font-size-16">{{ $adminData->name }}</h4>
-                    <span class="text-muted"><i class="align-middle ri-record-circle-line font-size-14 text-success"></i> Online</span>
+                    <span class="text-muted"><i class="align-middle ri-record-circle-line font-size-14 text-success"></i> অনলাইন</span>
                 </div>
         </a>
         </div>
@@ -30,12 +30,12 @@
                     <div id="sidebar-menu">
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title">Menu</li>
+                            <li class="menu-title">মেনু</li>
 
                             <li>
                                 <a href="{{ url('/dashboard') }}" class="waves-effect">
                                     <i class="ri-home-fill"></i>
-                                    <span>Dashboard</span>
+                                    <span>ড্যাশবোর্ড</span>
                                 </a>
                             </li>
 
@@ -43,10 +43,10 @@
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-hotel-fill"></i>
-                <span>Suppliers</span>
+                <span>সরবরাহকারী</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('supplier.all') }}">All Supplier</a></li>
+                <li><a href="{{ route('supplier.all') }}">সকল সরবরাহকারী</a></li>
 
             </ul>
         </li>
@@ -55,14 +55,14 @@
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-shield-user-fill"></i>
-                <span>Customers</span>
+                <span>ক্রেতা</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('customer.all') }}">All Customers</a></li>
-                 <li><a href="{{ route('credit.customer') }}">Credit Customers</a></li>
+                <li><a href="{{ route('customer.all') }}">সকল ক্রেতা</a></li>
+                 <li><a href="{{ route('credit.customer') }}">বাকি ক্রেতা</a></li>
 
-                 <li><a href="{{ route('paid.customer') }}">Paid Customers</a></li>
-                  <li><a href="{{ route('customer.wise.report') }}">Customer Wise Report</a></li>
+                 <li><a href="{{ route('paid.customer') }}">নগদ ক্রেতা</a></li>
+                  <li><a href="{{ route('customer.wise.report') }}">ক্রেতা ভিত্তিক রিপোর্ট</a></li>
 
             </ul>
         </li>
@@ -71,10 +71,10 @@
          <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-delete-back-fill"></i>
-                <span>Units</span>
+                <span>একক</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('unit.all') }}">All Unit</a></li>
+                <li><a href="{{ route('unit.all') }}">সকল একক</a></li>
 
             </ul>
         </li>
@@ -82,10 +82,10 @@
          <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-apps-2-fill"></i>
-                <span>Category</span>
+                <span>ক্যাটাগরি</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('category.all') }}">All Category</a></li>
+                <li><a href="{{ route('category.all') }}">সকল ক্যাটাগরি</a></li>
 
             </ul>
         </li>
@@ -94,10 +94,10 @@
           <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-reddit-fill"></i>
-                <span>Product</span>
+                <span>পণ্য</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('product.all') }}">All Product</a></li>
+                <li><a href="{{ route('product.all') }}">সকল পণ্য</a></li>
 
             </ul>
         </li>
@@ -106,12 +106,12 @@
           <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-oil-fill"></i>
-                <span>Purchase</span>
+                <span>ক্রয়</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('purchase.all') }}">All Purchase</a></li>
-                <li><a href="{{ route('purchase.pending') }}">Approval Purchase</a></li>
-                <li><a href="{{ route('daily.purchase.report') }}">Daily Purchase Report</a></li>
+                <li><a href="{{ route('purchase.all') }}">সকল ক্রয়</a></li>
+                <li><a href="{{ route('purchase.pending') }}">ক্রয় অনুমোদন</a></li>
+                <li><a href="{{ route('daily.purchase.report') }}">দৈনিক ক্রয় রিপোর্ট</a></li>
 
             </ul>
         </li>
@@ -120,27 +120,27 @@
           <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ri-compass-2-fill"></i>
-                <span>Invoice</span>
+                <span>ইনভয়েস</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="{{ route('invoice.all') }}">All Invoice</a></li>
-                <li><a href="{{ route('invoice.pending.list') }}">Approval Invoice</a></li>
-                <li><a href="{{ route('print.invoice.list') }}">Print Invoice List</a></li>
-                  <li><a href="{{ route('daily.invoice.report') }}">Daily Invoice Report</a></li>
+                <li><a href="{{ route('invoice.all') }}">সকল ইনভয়েস</a></li>
+                <li><a href="{{ route('invoice.pending.list') }}">ইনভয়েস অনুমোদন</a></li>
+                <li><a href="{{ route('print.invoice.list') }}">প্রিন্ট ইনভয়েস লিস্ট</a></li>
+                  <li><a href="{{ route('daily.invoice.report') }}">দৈনিক ইনভয়েস রিপোর্ট</a></li>
 
             </ul>
         </li>
 
-                            {{-- <li class="menu-title">Stock</li> --}}
+                            {{-- <li class="menu-title">স্টক</li> --}}
 
     <li>
         <a href="javascript: void(0);" class="has-arrow waves-effect">
             <i class="ri-gift-fill"></i>
-            <span>Stock</span>
+            <span>স্টক</span>
         </a>
         <ul class="sub-menu" aria-expanded="false">
-            <li><a href="{{ route('stock.report') }}">Stock Report</a></li>
-            <li><a href="{{ route('stock.supplier.wise') }}">Supplier / Product Wise </a></li>
+            <li><a href="{{ route('stock.report') }}">স্টক রিপোর্ট</a></li>
+            <li><a href="{{ route('stock.supplier.wise') }}">সরবরাহকারী / পণ্য ভিত্তিক </a></li>
 
         </ul>
     </li>
@@ -154,7 +154,7 @@
                                     <li><a href="pages-starter.html">Starter Page</a></li>
                                     <li><a href="pages-timeline.html">Timeline</a></li>
                                     <li><a href="pages-directory.html">Directory</a></li>
-                                    <li><a href="pages-invoice.html">Invoice</a></li>
+                                    <li><a href="pages-invoice.html">ইনভয়েস</a></li>
                                     <li><a href="pages-404.html">Error 404</a></li>
                                     <li><a href="pages-500.html">Error 500</a></li>
                                 </ul>

@@ -10,32 +10,32 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add Unit Page </h4><br><br>
-            
-  
+            <h4 class="card-title">একক যুক্ত করার পৃষ্ঠা </h4><br><br>
+
+
 
             <form method="post" action="{{ route('unit.store') }}" id="myForm" >
                 @csrf
 
-            <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Unit Name </label>
+            <div class="mb-3 row">
+                <label for="example-text-input" class="col-sm-2 col-form-label">এককের নাম</label>
                 <div class="form-group col-sm-10">
                     <input name="name" class="form-control" type="text"    >
                 </div>
             </div>
-            <!-- end row --> 
+            <!-- end row -->
 
-        
-<input type="submit" class="btn btn-info waves-effect waves-light" value="Add Unit">
+
+<input type="submit" class="btn btn-info waves-effect waves-light" value="যুক্ত করুন">
             </form>
-             
-           
-           
+
+
+
         </div>
     </div>
 </div> <!-- end col -->
 </div>
- 
+
 
 
 </div>
@@ -47,16 +47,16 @@
             rules: {
                 name: {
                     required : true,
-                }, 
-                 
+                },
+
             },
             messages :{
                 name: {
                     required : 'Please Enter Your Name',
                 },
-                 
+
             },
-            errorElement : 'span', 
+            errorElement : 'span',
             errorPlacement: function (error,element) {
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);
@@ -69,9 +69,9 @@
             },
         });
     });
-    
+
 </script>
 
 
- 
-@endsection 
+
+@endsection
