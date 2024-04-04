@@ -32,15 +32,13 @@
                         <thead>
                         <tr>
                             <th>নং</th>
-                            <th>নক্রয় নং</th>
+                            <th>ক্রয় নং</th>
                             <th>তারিখ </th>
                             <th>সরবরাহকারী</th>
                             <th>ক্যাটাগরি</th>
                             <th>পরিমাণ</th>
                             <th>পণ্যের নাম</th>
                             <th>অবস্থা</th>
-                            <th>একশন</th>
-
                         </thead>
 
 
@@ -62,14 +60,7 @@
                     @elseif($item->status == '1')
                     <span class="btn btn-success">অনুমোদিত</span>
                     @endif
-                     </td>
-
-                <td>
-@if($item->status == '0')
-<a href="{{ route('purchase.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
-@endif
                 </td>
-
             </tr>
                         @endforeach
 

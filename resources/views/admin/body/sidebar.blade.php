@@ -136,11 +136,11 @@
     <li>
         <a href="javascript: void(0);" class="has-arrow waves-effect">
             <i class="ri-gift-fill"></i>
-            <span>স্টক</span>
+            <span>স্টক রিপোর্ট</span>
         </a>
         <ul class="sub-menu" aria-expanded="false">
-            <li><a href="{{ route('stock.report') }}">স্টক রিপোর্ট</a></li>
-            <li><a href="{{ route('stock.supplier.wise') }}">সরবরাহকারী / পণ্য ভিত্তিক </a></li>
+            <li><a href="{{ route('stock.report') }}">সকল স্টক রিপোর্ট</a></li>
+            <li><a href="{{ route('stock.supplier.wise') }}">উৎস ভিত্তিক রিপোর্ট</a></li>
 
         </ul>
     </li>

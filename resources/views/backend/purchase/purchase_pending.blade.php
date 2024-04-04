@@ -36,7 +36,7 @@
                             <th>তারিখ </th>
                             <th>সরবরাহকারী</th>
                             <th>ক্যাটাগরি</th>
-                            <th>কপরিমাণ</th>
+                            <th>পরিমাণ</th>
                             <th>পণ্যের নাম</th>
                             <th>অবস্থা</th>
                             <th>একশন</th>
@@ -65,9 +65,10 @@
                      </td>
 
                 <td>
-@if($item->status == '0')
-<a href="{{ route('purchase.approve',$item->id) }} " class="btn btn-danger sm" title="অনুমোদিত" id="ApproveBtn">  <i class="fas fa-check-circle"></i> </a>
-@endif
+                    @if($item->status == '0')
+                    <a href="{{ route('purchase.approve',$item->id) }} " class="btn btn-danger sm" title="অনুমোদন" id="ApproveBtn">  <i class="fas fa-check-circle"></i> </a>
+                    <a href="{{ route('purchase.delete',$item->id) }}" class="btn btn-danger sm" title="ডিলেট" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+                    @endif
                 </td>
 
             </tr>

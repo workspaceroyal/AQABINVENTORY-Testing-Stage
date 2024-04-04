@@ -1,7 +1,6 @@
 @extends('admin.admin_master')
+
 @section('admin')
-
-
 <!-- Page-content -->
 <div class="page-content">
     <div class="container-fluid">
@@ -10,7 +9,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">ড্যাশবোর্ড</h4>
+                    <h6 class="mb-sm-0">ড্যাশবোর্ড</h6>
 
                     <div class="page-title-right">
                         <ol class="m-0 breadcrumb">
@@ -25,133 +24,105 @@
         <!-- end page title -->
 
         <div class="row">
-            <div class="col-xl-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="mb-2 text-truncate font-size-14">Total Sales</p>
-                                <h4 class="mb-2">1452</h4>
-                                <p class="mb-0 text-muted"><span class="text-success fw-bold font-size-12 me-2"><i class="align-middle ri-arrow-right-up-line me-1"></i>9.23%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-primary rounded-3">
-                                    <i class="ri-shopping-cart-2-line font-size-24"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div><!-- end cardbody -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-            <div class="col-xl-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="mb-2 text-truncate font-size-14">New Orders</p>
-                                <h4 class="mb-2">938</h4>
-                                <p class="mb-0 text-muted"><span class="text-danger fw-bold font-size-12 me-2"><i class="align-middle ri-arrow-right-down-line me-1"></i>1.09%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-success rounded-3">
-                                    <i class="mdi mdi-currency-usd font-size-24"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div><!-- end cardbody -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-            <div class="col-xl-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="mb-2 text-truncate font-size-14">New Users</p>
-                                <h4 class="mb-2">8246</h4>
-                                <p class="mb-0 text-muted"><span class="text-success fw-bold font-size-12 me-2"><i class="align-middle ri-arrow-right-up-line me-1"></i>16.2%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-primary rounded-3">
-                                    <i class="ri-user-3-line font-size-24"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div><!-- end cardbody -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-            <div class="col-xl-3 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex">
-                            <div class="flex-grow-1">
-                                <p class="mb-2 text-truncate font-size-14">Unique Visitors</p>
-                                <h4 class="mb-2">29670</h4>
-                                <p class="mb-0 text-muted"><span class="text-success fw-bold font-size-12 me-2"><i class="align-middle ri-arrow-right-up-line me-1"></i>11.7%</span>from previous period</p>
-                            </div>
-                            <div class="avatar-sm">
-                                <span class="avatar-title bg-light text-success rounded-3">
-                                    <i class="mdi mdi-currency-btc font-size-24"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div><!-- end cardbody -->
-                </div><!-- end card -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-
-        <div class="row">
             <div class="col-xl-6">
-
                 <div class="card">
                     <div class="pb-0 card-body">
                         <div class="float-end d-none d-md-inline-block">
                             <div class="dropdown card-header-dropdown">
                                 <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="text-muted">Report<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                    <span class="text-muted">ক্রয় রিপোর্ট<i class="mdi mdi-chevron-down ms-1"></i></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="#">Export</a>
-                                    <a class="dropdown-item" href="#">Import</a>
-                                    <a class="dropdown-item" href="#">Download Report</a>
+                                    <li ><a href="{{ route('purchase.all') }}">&nbsp; সকল ক্রয়</a></li>
+                                    <li><a href="{{ route('purchase.pending') }}">&nbsp; ক্রয় অনুমোদন</a></li>
+                                    <li><a href="{{ route('daily.purchase.report') }}">&nbsp; প্রাত্যহিক রিপোর্ট</a></li>
+                                    <li><a href="{{ route('supplier.all') }}">&nbsp; সরবরাহকারী</a></li>
+
                                 </div>
                             </div>
                         </div>
-                        <h4 class="mb-4 card-title">Email Sent</h4>
+                        <h6 class="mb-4 card-title">ক্রয়</h6>
 
-                        <div class="pt-3 text-center">
-                            <div class="row">
-                                <div class="mb-3 col-sm-4 mb-sm-0">
-                                    <div class="d-inline-flex">
-                                        <h5 class="me-2">25,117</h5>
-                                        <div class="text-success font-size-12">
-                                            <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+                        <div class="m-1 row">
+                            <a href="{{ route('purchase.add') }}" class=" btn btn-success btn-rounded waves-effect waves-light" ">নতুন ক্রয়</i></a>
+                        </div> <br>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল ক্রয়</strong></h6>
+                                                <a href="{{ route('purchase.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="mb-0 text-muted text-truncate">Marketplace</p>
-                                </div><!-- end col -->
-                                <div class="mb-3 col-sm-4 mb-sm-0">
-                                    <div class="d-inline-flex">
-                                        <h5 class="me-2">$34,856</h5>
-                                        <div class="text-success font-size-12">
-                                            <i class="mdi mdi-menu-up font-size-14"> </i>1.2 %
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ক্রয় অনুমোদন</strong></h6>
+                                                <a href="{{ route('purchase.pending') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="mb-0 text-muted text-truncate">Last Week</p>
-                                </div><!-- end col -->
-                                <div class="col-sm-4">
-                                    <div class="d-inline-flex">
-                                        <h5 class="me-2">$18,225</h5>
-                                        <div class="text-success font-size-12">
-                                            <i class="mdi mdi-menu-up font-size-14"> </i>1.7 %
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ক্রয় রিপোর্ট</strong></h6>
+                                                <a href="{{ route('daily.purchase.report') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <p class="mb-0 text-muted text-truncate">Last Month</p>
-                                </div><!-- end col -->
-                            </div><!-- end row -->
-                        </div>
-                    </div>
-                    <div class="px-2 py-0 card-body">
-                        <div id="area_chart" class="apex-charts" dir="ltr"></div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সরবরাহকারী</strong></h6>
+                                                <a href="{{ route('supplier.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
                     </div>
                 </div><!-- end card -->
             </div>
@@ -162,44 +133,103 @@
                         <div class="float-end d-none d-md-inline-block">
                             <div class="dropdown">
                                 <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="text-muted">This Years<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                    <span class="text-muted">ইনভয়েস রিপোর্ট<i class="mdi mdi-chevron-down ms-1"></i></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="#">Today</a>
-                                    <a class="dropdown-item" href="#">Last Week</a>
-                                    <a class="dropdown-item" href="#">Last Month</a>
-                                    <a class="dropdown-item" href="#">This Year</a>
+                                    <li><a href="{{ route('invoice.all') }}">&nbsp; সকল ইনভয়েস</a></li>
+                                    <li><a href="{{ route('invoice.pending.list') }}">&nbsp; ইনভয়েস অনুমোদন</a></li>
+                                    <li><a href="{{ route('print.invoice.list') }}">&nbsp; ইনভয়েস প্রিন্ট</a></li>
+                                    <li><a href="{{ route('daily.invoice.report') }}">&nbsp; ইনভয়েস রিপোর্ট</a></li>
+
                                 </div>
                             </div>
                         </div>
-                        <h4 class="mb-4 card-title">Revenue</h4>
+                        <h6 class="mb-4 card-title">ইনভয়েস</h6>
 
-                        <div class="pt-3 text-center">
-                            <div class="row">
-                                <div class="mb-3 col-sm-4 mb-sm-0">
-                                    <div>
-                                        <h5>17,493</h5>
-                                        <p class="mb-0 text-muted text-truncate">Marketplace</p>
-                                    </div>
-                                </div><!-- end col -->
-                                <div class="mb-3 col-sm-4 mb-sm-0">
-                                    <div>
-                                        <h5>$44,960</h5>
-                                        <p class="mb-0 text-muted text-truncate">Last Week</p>
-                                    </div>
-                                </div><!-- end col -->
-                                <div class="col-sm-4">
-                                    <div>
-                                        <h5>$29,142</h5>
-                                        <p class="mb-0 text-muted text-truncate">Last Month</p>
-                                    </div>
-                                </div><!-- end col -->
-                            </div><!-- end row -->
-                        </div>
+                        <div class="m-1 row">
+                            <a href="{{ route('invoice.add') }}" class=" btn btn-success btn-rounded waves-effect waves-light" ">নতুন ইনভয়েস</i></a>
+                        </div> <br>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল ইনভয়েস</strong></h6>
+                                                <a href="{{ route('invoice.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ইনভয়েস অনুমোদন</strong></h6>
+                                                <a href="{{ route('invoice.pending.list') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ইনভয়েস প্রিন্ট</strong></h6>
+                                                <a href="{{ route('print.invoice.list') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ইনভয়েস রিপোর্ট</strong></h6>
+                                                <a href="{{ route('daily.invoice.report') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
                     </div>
-                    <div class="px-2 py-0 card-body">
-                        <div id="column_line_chart" class="apex-charts" dir="ltr"></div>
-                    </div>
+
                 </div><!-- end card -->
             </div>
             <!-- end col -->
@@ -207,201 +237,225 @@
         <!-- end row -->
 
         <div class="row">
-            <div class="col-xl-8">
+            <div class="col-xl-6">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="dropdown float-end">
-                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="mdi mdi-dots-vertical"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                    <div class="pb-0 card-body">
+                        <div class="float-end d-none d-md-inline-block">
+                            <div class="dropdown card-header-dropdown">
+                                <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="text-muted">স্টক রিপোর্ট<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <li><a href="{{ route('category.all') }}">&nbsp; সকল ক্যাটাগরি</a></li>
+                                    <li><a href="{{ route('product.all') }}">&nbsp; সকল পণ্য</a></li>
+                                    <li ><a href="{{ route('stock.report') }}">&nbsp; সকল স্টক রিপোর্ট</a></li>
+                                    <li><a href="{{ route('stock.supplier.wise') }}">&nbsp; উৎস ভিত্তিক রিপোর্ট</a></li>
+
+                                </div>
                             </div>
                         </div>
+                        <h6 class="mb-4 card-title">পণ্যের স্টক</h6>
 
-                        <h4 class="mb-4 card-title">Latest Transactions</h4>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
 
-                        <div class="table-responsive">
-                            <table class="table mb-0 align-middle table-centered table-hover table-nowrap">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Position</th>
-                                        <th>Status</th>
-                                        <th>Age</th>
-                                        <th>Start date</th>
-                                        <th style="width: 120px;">Salary</th>
-                                    </tr>
-                                </thead><!-- end thead -->
-                                <tbody>
-                                    <tr>
-                                        <td><h6 class="mb-0">Charles Casey</h6></td>
-                                        <td>Web Developer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-success me-2"></i>Active</div>
-                                        </td>
-                                        <td>
-                                            23
-                                        </td>
-                                        <td>
-                                            04 Apr, 2021
-                                        </td>
-                                        <td>$42,450</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Alex Adams</h6></td>
-                                        <td>Python Developer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-warning me-2"></i>Deactive</div>
-                                        </td>
-                                        <td>
-                                            28
-                                        </td>
-                                        <td>
-                                            01 Aug, 2021
-                                        </td>
-                                        <td>$25,060</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Prezy Kelsey</h6></td>
-                                        <td>Senior Javascript Developer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-success me-2"></i>Active</div>
-                                        </td>
-                                        <td>
-                                            35
-                                        </td>
-                                        <td>
-                                            15 Jun, 2021
-                                        </td>
-                                        <td>$59,350</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Ruhi Fancher</h6></td>
-                                        <td>React Developer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-success me-2"></i>Active</div>
-                                        </td>
-                                        <td>
-                                            25
-                                        </td>
-                                        <td>
-                                            01 March, 2021
-                                        </td>
-                                        <td>$23,700</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Juliet Pineda</h6></td>
-                                        <td>Senior Web Designer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-success me-2"></i>Active</div>
-                                        </td>
-                                        <td>
-                                            38
-                                        </td>
-                                        <td>
-                                            01 Jan, 2021
-                                        </td>
-                                        <td>$69,185</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Den Simpson</h6></td>
-                                        <td>Web Designer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-warning me-2"></i>Deactive</div>
-                                        </td>
-                                        <td>
-                                            21
-                                        </td>
-                                        <td>
-                                            01 Sep, 2021
-                                        </td>
-                                        <td>$37,845</td>
-                                    </tr>
-                                     <!-- end -->
-                                     <tr>
-                                        <td><h6 class="mb-0">Mahek Torres</h6></td>
-                                        <td>Senior Laravel Developer</td>
-                                        <td>
-                                            <div class="font-size-13"><i class="align-middle ri-checkbox-blank-circle-fill font-size-10 text-success me-2"></i>Active</div>
-                                        </td>
-                                        <td>
-                                            32
-                                        </td>
-                                        <td>
-                                            20 May, 2021
-                                        </td>
-                                        <td>$55,100</td>
-                                    </tr>
-                                     <!-- end -->
-                                </tbody><!-- end tbody -->
-                            </table> <!-- end table -->
-                        </div>
-                    </div><!-- end card -->
+                                    <div class="m-2 row">
+                                        <a href="{{ route('category.add') }}" class="mt-2 btn btn-success btn-rounded waves-effect waves-light" ">নতুন ক্যাটাগরি</i></a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল ক্যাটাগরি</strong></h6>
+                                                <a href="{{ route('category.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+
+                                    <div class="m-2 row">
+                                        <a href="{{ route('product.add') }}" class="mt-2 btn btn-success btn-rounded waves-effect waves-light" ">নতুন পণ্য</i></a>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল পণ্য</strong></h6>
+                                                <a href="{{ route('product.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল স্টক রিপোর্ট</strong></h6>
+                                                <a href="{{ route('stock.report') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>উৎস ভিত্তিক রিপোর্ট</strong></h6>
+                                                <a href="{{ route('stock.supplier.wise') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                    </div>
+
                 </div><!-- end card -->
             </div>
             <!-- end col -->
-            <div class="col-xl-4">
+            <div class="col-xl-6">
                 <div class="card">
-                    <div class="card-body">
-                        <div class="float-end">
-                            <select class="shadow-none form-select form-select-sm">
-                                <option selected>Apr</option>
-                                <option value="1">Mar</option>
-                                <option value="2">Feb</option>
-                                <option value="3">Jan</option>
-                            </select>
+                    <div class="pb-0 card-body">
+                        <div class="float-end d-none d-md-inline-block">
+                            <div class="dropdown">
+                                <a class="text-reset" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="text-muted">ক্রেতা রিপোর্ট<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <li><a href="{{ route('customer.all') }}">&nbsp; সকল ক্রেতা</a></li>
+                                    <li><a href="{{ route('credit.customer') }}">&nbsp; বাকি রিপোর্ট</a></li>
+                                    <li><a href="{{ route('paid.customer') }}">&nbsp; নগদ রিপোর্ট</a></li>
+                                    <li><a href="{{ route('customer.wise.report') }}">&nbsp; ক্রেতার রিপোর্ট</a></li>
+
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="mb-4 card-title">Monthly Earnings</h4>
+                        <h6 class="mb-4 card-title">ক্রেতা</h6>
+
+                        <div class="m-1 row">
+                            <a href="{{ route('customer.add') }}" class=" btn btn-success btn-rounded waves-effect waves-light" ">নতুন ক্রেতা</i></a>
+                        </div> <br>
 
                         <div class="row">
-                            <div class="col-4">
-                                <div class="mt-4 text-center">
-                                    <h5>3475</h5>
-                                    <p class="mb-2 text-truncate">Market Place</p>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-4">
-                                <div class="mt-4 text-center">
-                                    <h5>458</h5>
-                                    <p class="mb-2 text-truncate">Last Week</p>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                            <div class="col-4">
-                                <div class="mt-4 text-center">
-                                    <h5>9062</h5>
-                                    <p class="mb-2 text-truncate">Last Month</p>
-                                </div>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>সকল ক্রেতা</strong></h6>
+                                                <a href="{{ route('customer.all') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
 
-                        <div class="mt-4">
-                            <div id="donut-chart" class="apex-charts"></div>
-                        </div>
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>বাকি রিপোর্ট</strong></h6>
+                                                <a href="{{ route('credit.customer') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>নগদ রিপোর্ট</strong></h6>
+                                                <a href="{{ route('paid.customer') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                            <div class="col-xl-6 col-md-12">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex">
+                                            <div class="flex-grow-1">
+                                                <h6 class="mb-2"><strong>ক্রেতার রিপোর্ট</strong></h6>
+                                                <a href="{{ route('customer.wise.report') }}" class="btn btn-success btn-rounded waves-effect waves-light" ">ক্লিক করুন </i></a>
+
+                                            </div>
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title bg-light text-success rounded-3">
+                                                    <i class="mdi mdi-currency-bdt font-size-24"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div><!-- end cardbody -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+                        </div><!-- end row -->
+
                     </div>
+
                 </div><!-- end card -->
-            </div><!-- end col -->
+            </div>
+            <!-- end col -->
         </div>
-        <!-- end row -->
+
     </div>
 
 </div>
 <!-- End Page-content -->
-
 @endsection
