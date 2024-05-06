@@ -31,9 +31,9 @@
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                         <thead>
                         <tr>
-                            <th>নং</th>
-                            <th>ক্রেতা</th>
+                            {{-- <th>নং</th> --}}
                             <th>ইনভয়েস নং</th>
+                            <th>ক্রেতা</th>
                             <th>তারিখ </th>
                             <th>বিবরণ</th>
                             <th>পরিমাণ</th>
@@ -45,9 +45,9 @@
 
                         	@foreach($allData as $key => $item)
             <tr>
-                <td> {{ $key+1}} </td>
-                <td> {{ $item['payment']['customer']['name'] }} </td>
+                {{-- <td> {{ $key+1}} </td> --}}
                 <td> #{{ $item->invoice_no }} </td>
+                <td> {{ $item['payment']['customer']['name'] }} </td>
                 <td> {{ date('d-m-Y',strtotime($item->date))  }} </td>
 
 
